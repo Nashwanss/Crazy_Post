@@ -1,0 +1,40 @@
+:root {
+  /* dark */
+  --bg_dark: #444951;
+  --txt_dark: #fff;
+  --input_bg_dark: #8B8B8D;
+  --div_bg_dark: #444;
+  --btn_bg_dark: #25779A;
+  --btn_txt_dark: #fff;
+
+  /* light  */
+  --bg_light: #eee;
+  --txt_light: #333;
+  --input_bg_dark: #DEE2E6;
+  --div_bg_light: #A6BCDD;
+  --btn_txt_light: #fff;
+}
+
+
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.darkMode{
+  background-color: var(--bg_dark);
+  color: var(--txt_dark);
+
+}
+
+.lightMode{
+  background-color: var(--bg_light);
+  color: var(--txt_light)
+}
+.dark-mode-toggle {
+  cursor: pointer;
+}
