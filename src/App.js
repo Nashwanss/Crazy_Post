@@ -38,5 +38,6 @@ export default function App() {
       <Test />
     </div>
   );
+  //Test component is not important.
 }
 
