@@ -1,29 +1,32 @@
-//importing react libraries
 import { useState } from 'react'
 import { MdLightMode } from 'react-icons/md';
 import { HiMoon } from 'react-icons/hi';
-// import components
+
 import Header from './Components/Header/Header';
-import PostSection from './Components/PostSection/PostSection';
+import PostFrom from './Components/PostFrom/PostFrom';
+import Test from './Components/Test';
 
-//import assets
-
-// import CSS file
 import './App.css';
 
 export default function App() {
-  const [darkMode , setDarkMode] = useState(true)
+  const [darkMode , setDarkMode] = useState(false);
+  const [dataTheme , setDataTheme] = useState('light');
+
   function darkModeHandler () {
     setDarkMode(prevDarkMode => !prevDarkMode)
+    setDataTheme(darkMode ? 'light' : 'dark')
   }
 
+  let darkModeIcon = darkMode ? 
+  <MdLightMode size="3em" color="#4ABBE0"/> :
+  <HiMoon size="3em" color="#201F55"/>
 
-  let darkModeIcon = darkMode ?
-        <MdLightMode size="3em" color="#4ABBE0"/> :
-        <HiMoon size="3em" color="#201F55"/>
+
+
 
   return (
-    <div className={darkMode ? "App darkMode" : "App lightMode"}>
+    <div className={darkMode ? "App darkMode" : "App lightMode"}
+    data-theme = {dataTheme}>
       <div 
       className="dark-mode-toggle"
       onClick={darkModeHandler}
@@ -31,7 +34,8 @@ export default function App() {
         {darkModeIcon}
       </div>
       <Header darkMode={darkMode} />
-      <PostSection darkMode={darkMode} />
+      <PostFrom />
+      <Test />
     </div>
   );
 }

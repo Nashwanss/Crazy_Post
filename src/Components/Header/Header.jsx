@@ -14,10 +14,10 @@ export default function Header ({darkMode}) {
 
     return (
         <div className="header">
-        <img className="mini-logo" 
-        src={miniLogo}
-        alt="Mini logo for Dark Mode" />
-        <h1>Welcome UserName</h1>
+            <img className="mini-logo" 
+            src={miniLogo}
+            alt="Mini logo for Dark Mode" />
+            <h1>Welcome To Crazy Post</h1>
         </div>
     )
 }

@@ -1,21 +1,32 @@
-:root {
-  /* dark */
-  --bg_dark: #444951;
-  --txt_dark: #fff;
-  --input_bg_dark: #8B8B8D;
-  --div_bg_dark: #444;
-  --btn_bg_dark: #25779A;
-  --btn_txt_dark: #fff;
+:root { /* light mode */
+  --primary-color: #eee; /* background color*/
+  --secondary-color: #000000; /* text color*/
+  --tertiary-color: #201F55; /* btn bg color */
+  --quaternary-color: #fff; /* btn text */
+  --quinary-color: #4496B9; /* div colors */
+  --senary-color: #201F55; /* div text colors */
+  --septenary-color: #DEE2E6; /* input colors */
+  --octonary-color: #000; /* input text colors */
+}
 
-  /* light  */
-  --bg_light: #eee;
-  --txt_light: #333;
-  --input_bg_dark: #DEE2E6;
-  --div_bg_light: #A6BCDD;
-  --btn_txt_light: #fff;
+[data-theme="dark"] { /* dark mode */
+  --primary-color: #444951; /* background color*/
+  --secondary-color: #ffffff; /* text color*/
+  --tertiary-color: #25779A; /* btn color */
+  --quaternary-color: #fff; /* btn text */
+  --quinary-color: #444951; /* div colors */
+  --senary-color: #fff; /* div text colors */
+  --septenary-color: #8B8B8D; /* input colors */
+  --octonary-color: #fff; /* input text colors */
 }
 
 
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 .App {
   width: 100vw;
@@ -24,17 +35,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.darkMode{
-  background-color: var(--bg_dark);
-  color: var(--txt_dark);
-
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: all 2s;
 }
 
-.lightMode{
-  background-color: var(--bg_light);
-  color: var(--txt_light)
-}
 .dark-mode-toggle {
   cursor: pointer;
 }
